@@ -85,4 +85,4 @@ def getTriangleNumWithDivisors(wantedNumDivisors)
   return triangleNum
 end
 
-puts getTriangleNumWithDivisors(3)
+puts getTriangleNumWithDivisors(500)
