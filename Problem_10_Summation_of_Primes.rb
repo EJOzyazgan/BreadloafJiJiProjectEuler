@@ -1,28 +1,29 @@
 # Find the sum of all the primes below two million.
 
-def isPrime?(num)
-  for i in (2..num-1)
-    if (num % i === 0)
-        return false
-    end
-  end
-
-  return true
-end
-
 def sumOfPrimesBellowNum(num)
-  currentNum = 2
-  sum = 0
+  currentNum = 6
+  currentPrimes = [2, 3, 5]
 
   while currentNum < num
-    if (isPrime?(currentNum))
-      sum = sum + currentNum
+    isPrime = true
+    # print "\n", currentPrimes, "\n"
+
+    for i in (0..Math.sqrt(currentPrimes.last))
+      if currentNum % currentPrimes.at(i) === 0
+        isPrime = false
+        break
+      end
+    end
+
+    if (isPrime)
+      currentPrimes.push(currentNum)
     end
 
     currentNum = currentNum + 1
   end
 
-  return sum
+  # puts currentPrimes
+  return currentPrimes.sum()
 end
 
 puts sumOfPrimesBellowNum(2000000)

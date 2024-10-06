@@ -3,7 +3,7 @@
 def getMaxPrimeFactor(num)
     maxPrimeFactor = 1
 
-    for i in (2..num-1)
+    for i in (2...num)
         if (num % i === 0)
             num /= i
             maxPrimeFactor = i

@@ -5,7 +5,7 @@ def isPrime(num)
     return false
   end
 
-  for i in (2..num-1)
+  for i in (2...num)
       if (num % i === 0)
           return false
       end
