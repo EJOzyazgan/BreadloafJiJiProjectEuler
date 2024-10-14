@@ -2,16 +2,19 @@
 # 
 # How many such routes are there through a 20 x 20 grid?
 
-def getNumberOfLatticePathsForGrid(x, y)
-  grid = Array.new(x, Array.new(y))
-  numPaths = 0
-  hasValidPath = true
+def getFactorial(num)
+  sum = 1
 
-  while hasValidPath
-    
+  for i in (1..num)
+    sum = sum * i
   end
-  
-  return numPaths
+
+  return sum
 end
 
-puts getNumberOfLatticePathsForGrid(2, 2)
+# n and k are grid size
+def calculateLatticePaths(n, k)
+  return getFactorial(n + k) / (getFactorial(n) * getFactorial(k))
+end
+
+puts calculateLatticePaths(20, 20)

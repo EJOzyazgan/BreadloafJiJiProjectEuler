@@ -22,7 +22,6 @@ def convertGridToInt(grid)
   return grid
 end
 
-
 def greatestProductInGrid(grid, size)
   maxProduct = 0
   
